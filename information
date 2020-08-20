@@ -1,0 +1,39 @@
+#there are two type of data types of Js.
+
+> premitive data type(undefined,null, number, string, boolean, symbol)
+> Reference data type(objects,Array)
+
+#Var vs let
+
+Array methiod:
+
+arr.pop()
+arr.push()
+arr.shift()
+arr.unshift()
+arr.toString()
+arr.sort()
+arr.slice()
+forEach(callbackfunction())
+forloop/while/loop
+arr.indexOf()
+
+String method:
+
+str.indexOf()
+str.lastIndexOf()
+str.length()
+str.slice(start,end)
+str.replace()
+
+DateMethod:
+day.getTime()
+day.getFullYear()
+day.getDay()
+day.getHours()
+day.getMinutes()
+
+Event:
+onmouseover
+onclick
+onload
