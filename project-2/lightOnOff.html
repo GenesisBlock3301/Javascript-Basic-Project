@@ -17,6 +17,7 @@
 <div class="container my-4">
     <h2>Light ON OFF</h2>
     <div id="on-off" class="bg-light">
+        <img src="pic_bulboff.gif" alt="">
     </div>
 
     <button id="on" class="btn btn-primary">ON</button>
@@ -27,7 +28,7 @@
 
 <div class="container my-4">
     <div class="my-4">
-        <h1>Below stop watch</h1>
+        <h1>Count Down</h1>
     </div>
     <div id="stopwatch">
         <h2 id="time"></h2>
@@ -41,23 +42,31 @@
     let on = document.getElementById('on');
     on.addEventListener('click', () => {
         on_off = document.getElementById('on-off');
-        on_off.innerHTML = "<h1>The light is ON</h1>";
+        on_off.innerHTML = "<img src='pic_bulbon.gif'>";
     });
 
     let Off = document.getElementById('off');
     Off.addEventListener('click', () => {
         on_off = document.getElementById('on-off');
-        on_off.innerHTML = "<h1>The light is OFF</h1>";
+        on_off.innerHTML = "<img src='pic_bulboff.gif'>";
 
     });
     //    stop watch
+    // set coundown
+    let countDown = new Date("Jan 5,2021 15:37:25").getTime();
     setInterval(() => {
-        time = new Date();
-        h = time.getHours();
-        m = time.getMinutes();
-        s = time.getSeconds();
-        ms = time.getMilliseconds();
-        document.getElementById('time').innerHTML = "<span>" + h + ':' + m + ':' + s + ':' + ms + "</span>"
+        time = new Date().getTime();
+        let distance = countDown - time;
+        let day = Math.floor(distance/(1000*60*60*24));
+        let h = distance%(1000*60*60*24);
+        let hours = Math.floor(h/(1000*60*60));
+        let m = distance%(1000*60*60);
+        let minutes = Math.floor(m/(1000*60));
+        let s = distance%(1000*60);
+        let seconds = Math.floor(s/(1000))
+        // console.log(time);
+
+        document.getElementById('time').innerHTML = "<span>"+day+":"+hours+":"+minutes+":"+seconds+"</span>"
     },1)
 //    iterupt stopwatch
 

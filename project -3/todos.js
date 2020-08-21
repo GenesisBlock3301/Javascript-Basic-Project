@@ -10,6 +10,8 @@ add.addEventListener('click',()=>{
     }
     else {
         itemJsonArrayStr = localStorage.getItem('itemsJson');
-        itemJsonArray = JSON.parse(itemJsonArrayStr)
+        itemJsonArray = JSON.parse(itemJsonArrayStr);
+        itemJsonArray.push(tit,desc);
+        localStorage.setItem('itemJson',JSON.stringify(itemJsonArray));
     }
 });
