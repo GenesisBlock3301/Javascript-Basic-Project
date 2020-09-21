@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    let objPeople = [
+        {
+            username: "sifat",
+            password: "nas12345"
+        },
+        {
+            username: "Nas",
+            password: "nas12345"
+        },
+        {
+            username: "Tafis",
+            password: "nas12345"
+        },
+        {
+            username: "nasu",
+            password: "nas12345"
+        },
+    ];
+    getInfo = ()=>{
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        objPeople.map((data)=>{
+            if (username === data.username && password === data.password){
+                console.log(username+ " is logged in"+ password)
+            }
+            else
+            {
+             console.log("Please Signup Account")
+            }
+        })
+    }
+</script>
+</head>
+<body>
+<form onclick="getInfo()">
+    <input id="username"  placeholder="Username"><br>
+    <input id="password" type="password" placeholder="Password">
+    <input type="button" value="Submit">
+</form>
+
+</body>
+</html>
